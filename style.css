@@ -29,7 +29,8 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  background-image: url(your-image.jpg);
+  background-color: #d5dbd6;
+  background-repeat: no-repeat;
 }
 .landingpage::before {
   content: "";
@@ -39,7 +40,8 @@ body {
   left: 60%;
   top: 138px;
   filter: blur(90px);
-  background-image: url(your-image.jpg);
+  background-color: #d5dbd6;
+  background-repeat: no-repeat;
     animation: background-animation 10s ease-in-out infinite;
 }
 
@@ -51,7 +53,7 @@ body {
   height: 123px;
   left: 80%;
   top: 550px;
-  background-color: #006E99;
+  background-color: #d5dbd6;
   filter: blur(80px);
      animation: background-animation 6s ease-in-out infinite;
 }
@@ -119,7 +121,7 @@ body {
 }
 .navbar .navlogo {
   height: 100%;
-  background: linear-gradient(93.51deg, #001f99, #000000);
+  background: linear-gradient(93.51deg, #d5ded7, #47eaff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Poppins";
@@ -140,10 +142,10 @@ body {
   color: #BCBCBC;
 }
 .navbar .navlink.selectedlink {
-  background: linear-gradient(93.51deg, #001f99, #000000);
+  background: linear-gradient(93.51deg, #d5ded7, #47eaff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  border-bottom: 1.5px solid #00D090;
+  border-bottom: 1.5px solid #47eaff;
     animation: background-animation 10s ease-in-out infinite;
 }
 
