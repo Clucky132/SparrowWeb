@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en" class="bg"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkpoint 1</title>
+
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+    body{
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .bg {
+      background: rgb(38, 39, 48);
+    }
+
+    .bg-2 {
+      position: absolute;
+      width: 891.56px;
+      height: 506px;
+      right: 0%;
+      left: 50%;
+      top: -350%;
+      transform: translateX(-50%);
+      background: linear-gradient(116.87deg, #0099ff 39.46%, #00aeff 64.47%);
+      filter: blur(250px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="px-5 fixed w-screen">
+    <div class="bg-2"></div>
+    <div class="relative z-10">
+      <header class="text-white mx-10">
+        <nav class="flex justify-between py-5">
+          <div class="flex items-center">
+            <h1 class="uppercase font-bold">Phantom</h1>
+            <span class="hidden md:flex border-r mr-2 ml-4 h-7"></span>
+            <h1 class="mx-4 font-semibold">Key System</h1>
+          </div>
+          <div class="hidden md:flex items-center justify-end">
+            <button id="dc" class="px-4 py-1.5 rounded font-bold relative overflow-hidden ring-1 ring-tertiary-black transition duration-300 hover:scale-110">
+              <span>Join Discord</span>
+            </button>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </div>
+  <div class="w-screen min-h-screen h-max">
+    <div class="w-full h-screen flex items-center justify-center">
+      <div class="container p-8 w-96 flex flex-col items-center">
+        <h2 class="text-white text-center tracking-wide text-2xl font-semibold mb-4">Checkpoint 1 of 1</h2>
+        <button id="continue_Btn" onclick="Continue()" class="w-3/5 mt-5 px-4 py-2 transition duration-500 text-white rounded focus:outline-none ring-1 ring-tertiary-black hover:bg-gradient-to-r hover:from-sky-800 hover:from-25% hover:via-sky-900 hover:via-50% hover:to-transparent hover:to-90% hover:scale-105" disabled="">
+          wait in 5 seconds.
+        </button>
+        <div class="text-white mt-4 relative"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let Join = document.getElementById('dc');
+    Join.addEventListener('click', () => {
+      window.open('https://discord.gg/4R6mNCVG9c', '_blank')
+    })
+
+    let Button = document.getElementById("continue_Btn")
+    let countdownDuration = 5
+
+    Button.disabled = true
+
+    let remainingTime = countdownDuration;
+
+    let countdownInterval = setInterval(function () {
+      Button.innerText = `wait in ${remainingTime} seconds.`;
+      remainingTime--;
+
+      if (remainingTime < 0) {
+        clearInterval(countdownInterval);
+        Button.disabled = false;
+        Button.innerText = "Continue!!";
+      }
+    }, 1000);
+
+    linkvertise_redirect = function (user_id, link) {
+      return `https://link-to.net/${user_id}/${Math.random() * 1000}/dynamic?r=${btoa(encodeURI(link))}`
+    }
+    function Continue() {
+      if (Button.disabled) return;
+      window.location.href = linkvertise_redirect(855086, `https://${window.location.host}/validate?t=wb6vgraifyl41ostee0gn04c0lmeac6yxszlby2n`);
+    }
+  </script>
+
+
+</body></html>
